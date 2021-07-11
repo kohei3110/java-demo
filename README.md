@@ -8,5 +8,5 @@ $ mvn package -Dmaven.test.skip=true
 
 ```shell
 $ docker build -t demo-msopenjdk .
-$ docker run -p 8080:8080 demo-quickstart-microsoft-build-of-openjdk
+$ docker run -p 8080:8080 demo-msopenjdk
 ```
