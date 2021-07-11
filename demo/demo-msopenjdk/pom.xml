@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>demo-msopenjdk</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>demo-msopenjdk</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <source-version>11</source-version>
+    <target-version>11</target-version>
+    <maven-surefire-plugin-version>2.12</maven-surefire-plugin-version>
+    <spark-version>2.9.3</spark-version>
+    <slf4j-version>1.7.21</slf4j-version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>${source-version}</source>
+          <target>${target-version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.sparkjava</groupId>
+      <artifactId>spark-core</artifactId>
+      <version>${spark-version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j-version}</version>
+    </dependency>    
+  </dependencies>
+</project>
